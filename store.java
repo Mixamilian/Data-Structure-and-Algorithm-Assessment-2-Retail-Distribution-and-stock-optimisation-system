@@ -22,10 +22,10 @@ public class store {
     public String getStoreID(){
         return storeID;
     }
-    public String getLocation(){
+    public String getStoreLocation(){
         return location;
     }
-    public int getStock(String productID){
+    public int getStoreStock(String productID){
         return storeInventory.getOrDefault(productID, 0);
     }
 
