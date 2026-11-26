@@ -3,21 +3,33 @@
 public class request {
 
     private String requestID;
-    private String storeID;
-    private String productID;
+    private store store;
+    private product product;
     private Integer requestAmount;
     private Integer priority;
 
     public request(String requestID, String storeID, String productID, Integer requestAmount, Integer priority){
         this.requestID = requestID;
-        this.storeID = storeID;
-        this.productID = productID;
+        this.store = store;
+        this.product = product;
         this.requestAmount = requestAmount;
         this.priority = priority;
     }
 
     public String getRequest(){
-        return requestID + storeID + productID + requestAmount + priority;
+        return requestID;
+    }
+    public store getStore(){
+        return store;
+    }
+    public product getProduct(){
+        return product;
+    }
+    public int getRequestAmount(){
+        return requestAmount;
+    }
+    public int getPriority(){
+        return priority;
     }
     
 
