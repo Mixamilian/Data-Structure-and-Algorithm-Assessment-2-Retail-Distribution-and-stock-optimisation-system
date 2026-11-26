@@ -30,5 +30,31 @@ public class engine {
         System.out.println("Registered request number: " +request.getRequest());
     }
 
+    public void engineProcess(){
+        System.out.println("Processing...");
+        while(!requestQueue.isEmpty()){
+            request currentRequest = requestQueue.poll();
+            boolean completed = false;
+            System.out.println("Request: " + currentRequest.getRequest());
+            System.out.println("Store: " + currentRequest.getStore());
+            System.out.println("Product: " + currentRequest.getProduct());
+            System.out.println("Amount: " + currentRequest.getRequestAmount());
+
+            for (distributionCentre i: centreMap.values()){
+                 String productRequested = currentRequest.getProduct().getProductID();
+                 if(i.getCentreStock(productRequested)>= currentRequest.getRequestAmount()){
+                    i.lowerStockAmount(productRequested, currentRequest.getRequestAmount());
+                    currentRequest.getStore().updateStoreStock(productRequested, currentRequest.getRequestAmount());
+                    completed = true;
+                    System.out.println("Successfully replenished stock");
+                    break;
+                 }
+            }
+            if(completed == false){
+                System.out.println("INsufficient stock availability. Request Denied");
+            }
+        }
+    }
+
 }
  
