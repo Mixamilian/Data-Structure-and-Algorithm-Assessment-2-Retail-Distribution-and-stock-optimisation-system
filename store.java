@@ -29,7 +29,7 @@ public class store {
         return storeInventory.getOrDefault(productID, 0);
     }
 
-    public void updateStock(String productID, int quantity){
+    public void updateStoreStock(String productID, int quantity){
         storeInventory.put(productID, storeInventory.getOrDefault(productID, 0) + quantity);
     }
 }
