@@ -3,9 +3,9 @@ public class product {
     private String productID;
     private String name;
     private String category;
-    private Float unitPrice;
+    private double unitPrice;
 
-    public product(String productID, String name, String category, Float unitPrice){
+    public product(String productID, String name, String category, double unitPrice){
         this.productID = productID;
         this.name = name;
         this.category = category;
@@ -21,7 +21,7 @@ public class product {
     public String getCategory(){
         return category;
     }
-    public Float getPrice(){
+    public double getPrice(){
         return unitPrice;
     }
 }
