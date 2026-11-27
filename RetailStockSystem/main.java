@@ -46,6 +46,10 @@ public class main {
         StockOperations.requestRegistery(req2);
         request req3 = new request("3", Store3, cheese, 60, 7);
         StockOperations.requestRegistery(req3);
+        request req4 = new request("4", Store2, cheese, 1000,3);
+        StockOperations.requestRegistery(req4);
+        request req5 = new request("5", Store1, cheese, 10, 1);
+        StockOperations.requestRegistery(req5);
 
         StockOperations.engineProcess();
     }
