@@ -40,11 +40,11 @@ public class main {
         South.addCentreStock("3333", 65);
 
         //sample request
-        request req1 = new request("1", "01", "2222", 30, 5);
+        request req1 = new request("1", Store1, milk, 30, 5);
         StockOperations.requestRegistery(req1);
-        request req2 = new request("2", "02", "1111", 80, 10);
+        request req2 = new request("2", Store2, bread, 80, 10);
         StockOperations.requestRegistery(req2);
-        request req3 = new request("3", "03", "3333", 60, 7);
+        request req3 = new request("3", Store3, cheese, 60, 7);
         StockOperations.requestRegistery(req3);
 
         StockOperations.engineProcess();
