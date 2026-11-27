@@ -52,5 +52,9 @@ public class main {
         StockOperations.requestRegistery(req5);
 
         StockOperations.engineProcess();
+
+         System.out.println("Remaining stock at north distribution centre after request: bread = " + North.getCentreStock("1111") + " milk = " + North.getCentreStock("2222") + " cheese = " +North.getCentreStock("3333"));
+        System.out.println("Remaining stock at central distribution centre after request: bread = " + Central.getCentreStock("1111") + " milk = " + Central.getCentreStock("2222") +" cheese = " + Central.getCentreStock("3333"));
+        System.out.println("Remaining stock at south distribution centre after request: bread = " + South.getCentreStock("1111") + " milk = " + South.getCentreStock("2222") + " cheese = " +South.getCentreStock("3333"));
     }
 }
