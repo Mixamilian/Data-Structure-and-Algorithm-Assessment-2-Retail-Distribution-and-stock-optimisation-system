@@ -8,7 +8,7 @@ public class request {
     private Integer requestAmount;
     private Integer priority;
 
-    public request(String requestID, String storeID, String productID, Integer requestAmount, Integer priority){
+    public request(String requestID, store store, product product, Integer requestAmount, Integer priority){
         this.requestID = requestID;
         this.store = store;
         this.product = product;
