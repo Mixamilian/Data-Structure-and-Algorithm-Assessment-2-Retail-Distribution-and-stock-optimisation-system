@@ -1,3 +1,4 @@
+package RetailStockSystem;
 
 import java.util.*;
 

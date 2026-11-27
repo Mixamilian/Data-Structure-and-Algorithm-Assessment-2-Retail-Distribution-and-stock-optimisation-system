@@ -1,3 +1,5 @@
+package RetailStockSystem;
+
 public class main {
     public static void main(String[] args) {
         engine StockOperations = new engine();

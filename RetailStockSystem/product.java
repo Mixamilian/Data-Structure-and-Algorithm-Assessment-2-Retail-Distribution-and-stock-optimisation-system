@@ -1,3 +1,4 @@
+package RetailStockSystem;
 public class product {
     
     private String productID;

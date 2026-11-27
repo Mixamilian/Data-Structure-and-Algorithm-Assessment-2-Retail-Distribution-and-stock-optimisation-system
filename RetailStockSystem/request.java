@@ -1,4 +1,4 @@
-
+package RetailStockSystem;
 
 public class request {
 
